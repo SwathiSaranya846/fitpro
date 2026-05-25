@@ -13,7 +13,9 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://mellifluous-kangaroo-28cbe2.netlify.app"
+}));
 app.use(express.json());
 
 // ✅ Root route (fix for "Cannot GET /")
